@@ -1,0 +1,43 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" class="page"
+  xmlns:ui="nativescript-twilio">
+  <StackLayout class="p-20">
+    <StackLayout>
+      <Label text="Sender phone number" />
+      <TextField
+        text="{{ senderPhoneNumber }}"
+        hint="+1512365432"
+      />
+      <Label text="Phone to call" />
+      <TextField
+        text="{{ phoneNumber }}"
+        hint="+1512365443"
+      />
+      <Label text="Other options for twilio.makeCall method" />
+    </StackLayout>
+    <StackLayout orientation="horizontal">
+      <TextField
+        text="{{ option1.key }}"
+        hint="key1"
+        class="option"
+      />
+      <TextField
+        text="{{ option1.value }}"
+        hint="value1"
+        class="option"
+      />
+    </StackLayout>
+    <StackLayout orientation="horizontal">
+      <TextField
+        text="{{ option2.key }}"
+        hint="key2"
+        class="option"
+      />
+      <TextField
+        text="{{ option2.value }}"
+        hint="value2"
+        class="option"
+      />
+    </StackLayout>
+    <Button class="bg-primary call-button" text="CALL" tap="{{ onCall }}" />
+  </StackLayout>
+</Page>
